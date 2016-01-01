@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_champion.user_id %>
+</p>
+
+<p>
+  <strong>Champion:</strong>
+  <%= @user_champion.champion_id %>
+</p>
+
+<p>
+  <strong>Skin:</strong>
+  <%= @user_champion.skin_id %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @user_champion.photo %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @user_champion.description %>
+</p>
+
+<%= link_to 'Edit', edit_user_champion_path(@user_champion) %> |
+<%= link_to 'Back', user_champions_path %>

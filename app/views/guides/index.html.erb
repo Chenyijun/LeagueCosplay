@@ -1,0 +1,43 @@
+<h1>Listing guides</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Type</th>
+      <th>Creator</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th>Active</th>
+      <th>Link</th>
+      <th>Description</th>
+      <th>Photo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guides.each do |guide| %>
+      <tr>
+        <td><%= guide.title %></td>
+        <td><%= guide.type %></td>
+        <td><%= guide.creator %></td>
+        <td><%= guide.created_at %></td>
+        <td><%= guide.updated_at %></td>
+        <td><%= guide.active %></td>
+        <td><%= guide.link %></td>
+        <td><%= guide.description %></td>
+        <td><%= guide.photo %></td>
+        <td><%= link_to 'Show', guide %></td>
+        <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
+        <td><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Guide', new_guide_path %>

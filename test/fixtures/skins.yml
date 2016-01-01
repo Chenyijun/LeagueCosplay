@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  champion: MyString
+  name: MyString
+  type: 
+  hair_length: MyString
+  hair_color_string: MyString
+  armor: MyString
+  gender: MyString
+  faction: MyString
+  race: MyString
+  difficulty: MyString
+  wings: false
+
+two:
+  champion: MyString
+  name: MyString
+  type: 
+  hair_length: MyString
+  hair_color_string: MyString
+  armor: MyString
+  gender: MyString
+  faction: MyString
+  race: MyString
+  difficulty: MyString
+  wings: false

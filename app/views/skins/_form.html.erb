@@ -1,0 +1,61 @@
+<%= form_for(@skin) do |f| %>
+  <% if @skin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@skin.errors.count, "error") %> prohibited this skin from being saved:</h2>
+
+      <ul>
+      <% @skin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :champion %><br>
+    <%= f.text_field :champion %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :hair_length %><br>
+    <%= f.text_field :hair_length %>
+  </div>
+  <div class="field">
+    <%= f.label :hair_color_string %><br>
+    <%= f.text_field :hair_color_string %>
+  </div>
+  <div class="field">
+    <%= f.label :armor %><br>
+    <%= f.text_field :armor %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :faction %><br>
+    <%= f.text_field :faction %>
+  </div>
+  <div class="field">
+    <%= f.label :race %><br>
+    <%= f.text_field :race %>
+  </div>
+  <div class="field">
+    <%= f.label :difficulty %><br>
+    <%= f.text_field :difficulty %>
+  </div>
+  <div class="field">
+    <%= f.label :wings %><br>
+    <%= f.check_box :wings %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<h1>Listing user_champions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Champion</th>
+      <th>Skin</th>
+      <th>Photo</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_champions.each do |user_champion| %>
+      <tr>
+        <td><%= user_champion.user_id %></td>
+        <td><%= user_champion.champion_id %></td>
+        <td><%= user_champion.skin_id %></td>
+        <td><%= user_champion.photo %></td>
+        <td><%= user_champion.description %></td>
+        <td><%= link_to 'Show', user_champion %></td>
+        <td><%= link_to 'Edit', edit_user_champion_path(user_champion) %></td>
+        <td><%= link_to 'Destroy', user_champion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User champion', new_user_champion_path %>

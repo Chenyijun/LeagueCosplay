@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @guide.title %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @guide.type %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @guide.creator %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @guide.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @guide.updated_at %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @guide.active %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @guide.link %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @guide.description %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @guide.photo %>
+</p>
+
+<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<%= link_to 'Back', guides_path %>

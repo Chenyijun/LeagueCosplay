@@ -1,0 +1,47 @@
+<h1>Listing skins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Champion</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Hair length</th>
+      <th>Hair color string</th>
+      <th>Armor</th>
+      <th>Gender</th>
+      <th>Faction</th>
+      <th>Race</th>
+      <th>Difficulty</th>
+      <th>Wings</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @skins.each do |skin| %>
+      <tr>
+        <td><%= skin.champion %></td>
+        <td><%= skin.name %></td>
+        <td><%= skin.type %></td>
+        <td><%= skin.hair_length %></td>
+        <td><%= skin.hair_color_string %></td>
+        <td><%= skin.armor %></td>
+        <td><%= skin.gender %></td>
+        <td><%= skin.faction %></td>
+        <td><%= skin.race %></td>
+        <td><%= skin.difficulty %></td>
+        <td><%= skin.wings %></td>
+        <td><%= link_to 'Show', skin %></td>
+        <td><%= link_to 'Edit', edit_skin_path(skin) %></td>
+        <td><%= link_to 'Destroy', skin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Skin', new_skin_path %>
